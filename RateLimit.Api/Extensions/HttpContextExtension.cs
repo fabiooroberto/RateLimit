@@ -11,6 +11,6 @@ namespace RateLimit.Api.Extensions
         }
 
         public static string GetCustomerKey(this HttpContext context)
-        => $"{context.Request.Path}_{context.Connection.RemoteIpAddress}";
+        => $"{context.Request.Path}_{context.Request.Method}_{context.Connection.RemoteIpAddress}";
     }
 }
