@@ -21,7 +21,7 @@ namespace RateLimit.Api.Controllers
         }
 
         [HttpGet(Name = "limit-request")]
-        [RateLimit(MaxRequests = 2, TimeWindowInSeconds = 15)]
+        [RateLimit(MaxRequests = 3, TimeWindowInSeconds = 120)]
         public IEnumerable<WeatherForecast> Get()
         {
             _logger.LogInformation("vai ser bloqueado");
